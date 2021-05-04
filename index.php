@@ -9,6 +9,14 @@
     {
         require_once("views/".$_GET["action"].".php");
     }
+    else if(!empty($_GET["action"])) {
+        if ($_GET['action'] == 'read' || $_GET['action'] == 'delete' || $_GET['action'] == 'update') {
+            include "views/actionsForCRUD.php";
+        }
+        else if($_GET['action'] == 'create_bug') {
+            include "CRUD/create.php";
+        }
+    }
     else {
         require_once("views/main.php");
     }

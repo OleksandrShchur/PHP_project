@@ -11,8 +11,10 @@
         <link rel="stylesheet" href="css/nav.css" />
         <link rel="stylesheet" href="css/login.css" />
         <link rel="stylesheet" href="css/errors.css" />
+        <link rel="stylesheet" href="css/bugsForm.css" />
         <script src="js/jquery.min.js"></script>
         <script src="js/parallax.min.js"></script>
+        <script src="js/main.js"></script>
         <title>Kali Linux - one of the best Linux distributions</title>
     </head>
 
@@ -20,21 +22,21 @@
       <div class="navbar">
         <a href="?action=main">Home</a>
         <a href="?action=about">About us</a>
+        <a href="?action=bugs">View bugs</a>
 
         <?php
           if (empty($_SESSION['login_user'])) {
               echo '<button id="registration" style="width:auto;">Registration</button>';
-          }
-        ?>
-        <?php
-          if (empty($_SESSION['login_user'])) {
               echo '<div class="header_item headerButton">';
               echo '<a href="?action=login">';
               echo 'Login</a></div>';
           } else {
+              echo '<div class="header_item headerButton">
+                      <a href="?action=create_bug"/>';
+              echo 'Add new bug</a></div>';
 
               echo '<div class="header_item headerButton">
-                      <a href="?action=logout">';
+                      <a href="?action=logout"/>';
               echo 'Logout</a></div>';
           }
         ?>
