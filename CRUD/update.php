@@ -1,10 +1,7 @@
 <?php
     $edit_id = $_GET['bugs_id'];
-    $db = new mysqli('127.0.0.1:3307', 'root', '', 'kali');
-
-    if ($db->connect_errno != 0) { // die if error
-        die($db->connect_error);
-    }
+    
+    include "core/connectToDb.php";
 
     $query = "SELECT * FROM `bugs` WHERE bugs_id = '$edit_id'";
     $result = $db->query($query);

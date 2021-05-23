@@ -1,11 +1,7 @@
 <?php
     $bugs_id = (int)$_GET['bugs_id'];
     if ($bugs_id != 0) {
-        $db = new mysqli('127.0.0.1:3307', 'root', '', 'kali');
-
-        if ($db->connect_errno != 0) { // die if error
-            die($db->connect_error);
-        }
+        include "core/connectToDb.php";
 
         $bugTitle_error = '';
         $details_error = '';

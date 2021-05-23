@@ -1,11 +1,7 @@
 <?php
     $read_id = $_GET['bugs_id'];
 
-    $db = new mysqli('127.0.0.1:3307', 'root', '', 'kali');
-
-    if ($db->connect_errno != 0) { // die if error
-        die($db->connect_error);
-    }
+    include "core/connectToDb.php";
 
     $query = "SELECT * FROM bugs JOIN users ON users.id = bugs.user_id WHERE bugs_id = '$read_id' ORDER BY date DESC";
 

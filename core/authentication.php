@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "core/readInJson.php";
     $error = '';
 
     if (isset($_POST['userName'])) {

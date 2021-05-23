@@ -1,9 +1,5 @@
 <?php
-    $db = new mysqli('127.0.0.1:3307', 'root', '', 'kali');
-
-    if ($db->connect_errno != 0) { // die if error
-        die($db->connect_error);
-    }
+    include "core/connectToDb.php";
 
     $query = $db->query("SELECT * FROM bugs JOIN users ON users.id = bugs.user_id ORDER BY date DESC");
     $data = mysqli_fetch_array($query);
