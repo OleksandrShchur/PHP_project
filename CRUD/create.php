@@ -48,6 +48,8 @@
             echo "Record met problem. Please, try again";
             $db->close();
         }
+
+        include "core/readInJSON.php";
     }
 ?>
 

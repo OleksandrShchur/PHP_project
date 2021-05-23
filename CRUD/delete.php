@@ -8,4 +8,5 @@
     if ($insert) {
         header("Location:?action=bugs");
     }
+    include "core/readInJSON.php";
 ?>

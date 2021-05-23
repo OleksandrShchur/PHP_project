@@ -72,6 +72,7 @@
             echo $bugTitle_error;
             echo $details_error;
             echo $notice;
+            include "core/readInJSON.php";
         ?>
     </div>
 </div>

@@ -7,6 +7,7 @@
 
     $result = $db->query($query);
     $data = mysqli_fetch_assoc($result);
+    
 ?>
 
 <div class="about-inner">
